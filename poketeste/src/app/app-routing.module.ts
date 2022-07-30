@@ -1,7 +1,12 @@
+import { PokedetailsComponent } from './pokedetails/pokedetails.component';
+import { PokecardsComponent } from './pokecards/pokecards.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
-const routes: Routes = [];
+const routes: Routes = [
+  {path:'app-pokecards', component: PokecardsComponent},
+  {path:'app-pokedetails', component: PokedetailsComponent},
+];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
