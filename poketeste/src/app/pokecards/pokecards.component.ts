@@ -8,6 +8,7 @@ import { AuthService } from 'src/app/services/auth.service';
   styleUrls: ['./pokecards.component.sass']
 })
 export class PokecardsComponent implements OnInit {
+  retorno: any;
 
   constructor(private authService:AuthService, private router: Router) { }
 
@@ -16,6 +17,9 @@ export class PokecardsComponent implements OnInit {
   }
   
   buscaCard(): void {
-    this.authService.buscaCard('pl3-1')
+    this.authService.buscaCard('pl3-1').subscribe(data => {
+      console.log(data)
+      this.retorno = data["data"]
+    })
   }
 }

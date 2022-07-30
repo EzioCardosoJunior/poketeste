@@ -5,19 +5,19 @@ import { environment } from 'src/environments/environment.prod';
 import { map } from 'rxjs/operators'
 import { Router } from '@angular/router';
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class AuthService {
-
-  apiURL = environment.apiURL;
-  token: string | undefined;
+  apiURL = environment.apiURL;  
 
   constructor(private http: HttpClient, private router:Router) { }
 
   buscaCard(user: any): Observable<any> 
   {
-    alert(user)
-    return this.http.get(`${this.apiURL}id`);
+    console.log(this.apiURL)
+    return this.http.get(`${this.apiURL}`);
   }
-  
+
 }
+
+
