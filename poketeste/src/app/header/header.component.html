@@ -1,1 +1,11 @@
-<p>header works!</p>
+<mat-toolbar color="primary">  
+    <mat-toolbar-row>
+      <span>{{titulo}}</span>
+      <span class="example-spacer"></span>
+
+      <mat-icon class="example-icon" aria-hidden="false" aria-label="Example heart icon" [routerLink]="['/home']">home</mat-icon>
+      <mat-icon class="example-icon" aria-hidden="false" aria-label="Example delete icon" [routerLink]="['/app-tabela']">table</mat-icon>
+      <mat-icon class="example-icon" aria-hidden="false" aria-label="Example delete icon" [routerLink]="['/app-estatisticas']">insert_chart</mat-icon>
+    </mat-toolbar-row>
+  </mat-toolbar>
+  

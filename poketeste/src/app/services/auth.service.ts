@@ -15,7 +15,7 @@ export class AuthService {
   buscaCard(user: any): Observable<any> 
   {
     console.log(this.apiURL)
-    return this.http.get(`${this.apiURL}`);
+    return this.http.get(`${this.apiURL}?q=id:ex9-4`);
   }
 
 }
